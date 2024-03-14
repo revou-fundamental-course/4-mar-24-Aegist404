@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link -->
+    <link rel="stylesheet" href="main.css" />
+
+    <title>BMI Calculator</title>
+  </head>
+  <body>
+    <header>
+      <h1>BMI Calculator</h1>
+      <p>
+        Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk
+        tubuh yang menunjang penampilan, berat badan ideal juga menandakan
+        kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang
+        dengan kalkulator BMI
+      </p>
+    </header>
+    <main>
+      <!-- Content form -->
+      <div class="content">
+        <h3>Form Kalkulasi</h3>
+        <!-- Form input -->
+        <!-- <div class=""> -->
+        <!-- Pilihan gender -->
+        <form>
+          <p>Jenis Kelamin</p>
+          <div class="gender">
+            <input type="radio" name="gender" id="pria" />
+            <label for="pria">Pria</label>
+
+            <input type="radio" name="gender" id="wanita" />
+            <label for="wanita">Wanita</label>
+          </div>
+
+          <!-- Berat Badan -->
+          <label for="beratBadan">Berat Badan (kg)</label>
+          <input type="number" name="berat" id="beratBadan" />
+          <!-- Usia -->
+          <label for="usia">Usia (tahun)</label>
+          <input type="number" name="usia" id="usia" />
+          <!-- Tinggi Badan -->
+          <label for="tinggiBadan">Tinggi Badan (cm)</label>
+          <input type="number" name="tinggi" id="tinggiBadan" />
+
+          <!-- Action -->
+          <div class="button">
+            <button type="submit" id="calculate">Hitung BMI</button>
+            <button type="reset" class="reset">Reset</button>
+          </div>
+        </form>
+
+        <!-- </div> -->
+
+        <!-- Paragraf pendukung -->
+        <div class="paragraph">
+          <h3>Keunggulan Fitur</h3>
+
+          <ol>
+            <li><p>Menghitung berat badan</p></li>
+            <li><p>Menentukan kategori berat badan ideal atau tidak</p></li>
+            <li><p>Mempersiapkan program penurunan berat badan</p></li>
+          </ol>
+
+          <p>
+            Kalkulator ini hanya bisa digunakan oleh orang dewasa (wanita hamil
+            atau menyusuitisak boleh mengandalkan pembacaaan BMI ini) dan tidak
+            ada tindakan yang harus diambil berdasarkan nilainya selain
+            berkonsultasi dengan orang yang memenuhi syarat seperti dokter.
+          </p>
+          <p>
+            Kalkulator akan memberi Anda gambaran tentang perbandingan berat
+            badan Anda dengan nilai umum. Indeks Massa Tubuh (atau BMI) dihitung
+            sebagai berat badan anda (dalam kilogram) dibagi dengan kuadrat
+            tinggi badan Anda (dalam meter) atau Kg/M<sup>2</sup>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Content menampilkan hasil -->
+      <div class="contentView">
+        <h3>Hasil</h3>
+        <!-- Menampilkan hasil -->
+        <div class="review">
+          <p class="kondisi" id="condition">Tidak ada kondisi</p>
+          <p class="bmi" id="bmi">0</p>
+          <p class="text" id="text">Tidak ada kondisi</p>
+          <button>Download Hasil BMI</button>
+        </div>
+
+        <!-- Paragraf -->
+        <div class="paragraph">
+          <p>
+            Hasil BMI berada diantara <span id="under">0</span> dan
+            <span id="over">0</span>
+          </p>
+
+          <p id="desc"></p>
+
+          <div class="link">
+            <button>Konsultasi Ahli Gizi Via Aplikasi</button>
+            <button>Registrasi Online Ahli Gizi</button>
+          </div>
+
+          <p>
+            BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari
+            kesehatantubuh dan resiko penyakit seseorang. Anda perlu konsultasi
+            lebihlanjut mengenai resiko kekhwatiran Anda terkait dengan berat
+            badan Anda.
+          </p>
+        </div>
+
+        <div class="diagnosis">
+          <p class="title">
+            Beberapa penyakit yang berasal dari :
+            <span id="diagnosisTitle"></span>
+          </p>
+
+          <ul>
+            <li><p id="diagnosis1"></p></li>
+            <li><p id="diagnosis2"></p></li>
+            <li><p id="diagnosis3"></p></li>
+          </ul>
+
+          <div class="link">
+            <button>Konsultasi Ahli Gizi Via Aplikasi</button>
+            <button>Registrasi Online Ahli Gizi</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2024 - Nauval || BMI Calculator</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
